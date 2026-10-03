@@ -1,0 +1,21 @@
+# Swift / Xcode
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcuserstate
+
+# Generated distribution and local diagnostics
+*.app/
+*.dmg
+*.zip
+menupin-diagnostics*.json
+MenuPin-*-diagnostics.json
+
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
