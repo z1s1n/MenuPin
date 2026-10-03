@@ -1,21 +1,104 @@
-# Swift / Xcode
+# SwiftPM / Xcode build products and local package state
+# Keep Package.resolved trackable: MenuPin is an application.
 .build/
 .swiftpm/
+build/
 DerivedData/
-*.xcodeproj/xcuserdata/
-*.xcworkspace/xcuserdata/
-*.xcuserstate
+Carthage/Build/
+*.hmap
+*.o
+*.a
+*.dylib
+*.swiftmodule
+*.swiftdoc
+*.swiftsourceinfo
+*.dSYM/
+*.dSYM.zip
 
-# Generated distribution and local diagnostics
+# Xcode per-user settings (shared project/workspace files remain trackable)
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.moved-aside
+
+# Test results, coverage and profiler output
+*.xcresult/
+*.xcactivitylog
+*.profraw
+*.profdata
+*.gcno
+*.gcda
+/coverage/
+
+# Generated applications, installers and distribution archives
+# Publish releases deliberately; do not commit local builds by accident.
 *.app/
+*.framework/
+*.xcframework/
+*.ipa
+*.pkg
 *.dmg
 *.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+/dist/
+
+# Local signing material and provisioning profiles
+*.p12
+*.pfx
+*.p8
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+
+# Local environment and secret configuration; example files are shareable
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.local.xcconfig
+/secrets/
+/.secrets/
+/.credentials/
+
+# MenuPin diagnostics, logs, caches and scratch output
 menupin-diagnostics*.json
 MenuPin-*-diagnostics.json
+*.log
+*.log.*
+*.trace
+.cache/
+/diagnostics/
+/logs/
+/tmp/
+/temp/
+/work/
+/output/
+/outputs/
 
-# macOS and editors
+# macOS metadata and AppleDouble files
 .DS_Store
+.AppleDouble/
+.LSOverride
+._*
+.DocumentRevisions-V100/
+.Spotlight-V100/
+.Trashes/
+.VolumeIcon.icns
+
+# Local editor state, backups and temporary files
 .idea/
 .vscode/
+.fleet/
+.history/
 *.swp
 *.swo
+*~
+*.bak
+*.orig
+*.rej
